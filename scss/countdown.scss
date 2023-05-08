@@ -1,0 +1,71 @@
+.countdown {
+    width: 90%;
+    max-width: 690px;
+    margin-bottom: 4.5rem;
+    // grid
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+
+    &__item{
+
+        &-number{
+            width: 70px;
+            height: 65px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: $dark-desaturated-blue;  
+            border-radius: 4px;
+            box-shadow: 0 6px 6px $very-dark-black-blue;
+            // font
+            @extend %text-align-center;
+            font-size: 2.5rem;
+            color: $soft-red;
+            line-height: 65px;
+            @include tablet-portrait-up {
+                width: 100px;
+                height: 81px;
+                // font
+                font-size: 3rem;
+                line-height: 81px;
+            }
+            @include tablet-landscape-up {
+                width: 120px;
+                height: 100px;
+                // font
+                font-size: 4rem;
+                line-height: 100px;
+            }
+            @include desktop-up {
+                width: 148px;
+                height: 140px;
+                margin-bottom: 30px;
+                box-shadow: 0 10px $very-dark-black-blue;
+                // font
+                font-size: 5rem;
+                line-height: 140px;
+            }
+        }
+
+        &-time{
+            opacity: .5;
+            // font
+            @extend %text-align-center;
+            @extend %text-uppercase;
+            font-size: 7px;
+            letter-spacing: 3px;
+            color: $white;
+            @include tablet-portrait-up {
+                font-size: 10px;
+                letter-spacing: 4px;
+            }
+            @include tablet-landscape-up {
+                font-size: 12px;
+            }
+            @include desktop-up {
+                font-size: 14px;
+                letter-spacing: 6px;
+            }
+        }
+    }
+}

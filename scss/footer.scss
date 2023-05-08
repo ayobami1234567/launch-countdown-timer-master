@@ -1,0 +1,27 @@
+.social-bar {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    @include desktop-up { margin-top: 14px; }
+
+    &__item {
+        font-size: 1.6rem;
+        color: $white;
+        opacity: .5;
+        transition: opacity .5s, color .5s;
+        @include desktop-up {
+            &:hover {
+                opacity: 1;
+                color: $soft-red;
+                transition: opacity .5s, color .5s;
+            }
+        }
+    }
+}
+.attribution {
+    font-size: 11px;
+    @extend %text-align-center;
+
+    &__link { color: hsl(228, 45%, 44%); }
+}
